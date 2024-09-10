@@ -404,8 +404,8 @@ function offsetFrames(api:FunkinPackerApi, exporter: Exporter, rects:ExporterRec
 	for(const rect of rects) {
 		const frameAnim = cleanPrefix(rect.name);
 
-		rect.sourceSize.w = Math.max(rect.sourceSize.w, maxSizes[frameAnim].mw);
-		rect.sourceSize.h = Math.max(rect.sourceSize.h, maxSizes[frameAnim].mh);
+		rect.sourceSize.w = Math.max(rect.sourceSize.w, maxSizes[frameAnim].mw) + rect.spriteSourceSize.x;
+		rect.sourceSize.h = Math.max(rect.sourceSize.h, maxSizes[frameAnim].mh) + rect.spriteSourceSize.y;
 	}
 
 	return {rects, config};

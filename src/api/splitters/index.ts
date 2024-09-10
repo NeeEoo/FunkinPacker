@@ -9,6 +9,7 @@ import Splitter, { type SplitterOptions } from './Splitter';
 import type { Rect } from 'api/types';
 import TypedObserver from 'TypedObserver';
 import APP from 'client/APP';
+import Phaser3 from './Phaser3';
 
 const GridSplitter = new Grid();
 
@@ -19,7 +20,8 @@ export const list: Splitter[] = [
 	new JsonArray(),
 	//XML,
 	new UIKit(),
-	new Spine()
+	new Spine(),
+	new Phaser3()
 ] as const;
 
 function getDefaultSplitter():Splitter {
