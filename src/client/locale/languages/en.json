@@ -53,7 +53,7 @@
 	"PADDING": "Sprite Padding:",
 	"PADDING_TITLE": "Sprites padding",
 	"EXTRUDE": "Border padding:",
-	"EXTRUDE_TITLE": "Sprites border pixels extrude size",
+	"EXTRUDE_TITLE": "Pads the border of the image",
 	"ALLOW_ROTATION": "Allow rotation:",
 	"ALLOW_ROTATION_TITLE": "Allow sprites rotation",
 	"ALLOW_TRIM": "Allow trim:",
