@@ -391,14 +391,12 @@ function offsetFrames(api:FunkinPackerApi, exporter: Exporter, rects:ExporterRec
 		let frameY = rect.spriteSourceSize.y;
 		let frameW = rect.spriteSourceSize.w;
 		let frameH = rect.spriteSourceSize.h;
-		let frameOffsetX = 0;
-		let frameOffsetY = 0;
 
 		frameX += rect.frameSize.x;
 		frameY += rect.frameSize.y;
 
-		rect.spriteSourceSize.x = frameX + frameOffsetX;
-		rect.spriteSourceSize.y = frameY + frameOffsetY;
+		rect.spriteSourceSize.x = frameX;
+		rect.spriteSourceSize.y = frameY;
 	}
 
 	const maxSizes = getMaxSizesForSourceSize(rects);
