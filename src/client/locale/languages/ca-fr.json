@@ -93,7 +93,7 @@
 	"EXPORTER_ERROR": "Erreur d'exportation: %s",
 	"CUSTOM_EXPORTER_ERROR": "Erreur de modèle : %s",
 	"FILE_EXT": "Extension fichier :",
-	"DOCUMENTATION": "documentation",
+	"DOCUMENTATION": "Documentation",
 	"SAVE_CHANGES_CONFIRM": "Enregistrer fichier projet ?",
 
 	"MENU_FILE": "Fichier",
