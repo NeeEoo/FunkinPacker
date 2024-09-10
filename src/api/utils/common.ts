@@ -231,10 +231,10 @@ export function fixManualOffsetOnRect(rect:Rect) {
 }
 
 export function fixManualOffsets(rects:Rect[]) {
-	if(isManuallyOffset(rects)) {
-		for(let i = 0; i < rects.length; i++) {
-			fixManualOffsetOnRect(rects[i]);
-		}
-		console.log('Removed offsets from all frames, reapplying when exporting');
+	//if(isManuallyOffset(rects)) {
+	for(let i = 0; i < rects.length; i++) {
+		fixManualOffsetOnRect(rects[i]);
 	}
+	console.log('Removed offsets from all frames, reapplying when exporting');
+	//}
 }

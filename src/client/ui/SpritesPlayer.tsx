@@ -222,10 +222,10 @@ class SpritesPlayer extends React.Component<Props> {
 		let frameOffsetX = 0;
 		let frameOffsetY = 0;
 
-		if(texture.config.manualOffset) {
-			frameX += texture.config.frameSize.x;
-			frameY += texture.config.frameSize.y;
-		}
+		//if(texture.config.manualOffset) {
+		frameX += texture.config.frameSize.x;
+		frameY += texture.config.frameSize.y;
+		//}
 
 		if(frameX < 0) {
 			frameW -= frameX;
