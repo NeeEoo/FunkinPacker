@@ -134,8 +134,9 @@ class PackProperties extends React.Component<Props, State> {
 		data.sortExportedRows = data.sortExportedRows === undefined ? true : data.sortExportedRows;
 		data.repackUpdateFileName = data.repackUpdateFileName === undefined ? true : data.repackUpdateFileName;
 		data.statsSI = data.statsSI === undefined ? 1024 : data.statsSI;
-		data.packer = getPackerByType(data.packer) ? data.packer : packers[2].packerName;
-		data.packerMethod = data.packerMethod || packers[2].defaultMethod;
+		var optimalPacker = getPackerByType("OptimalPacker");
+		data.packer = getPackerByType(data.packer) ? data.packer : optimalPacker.packerName;
+		data.packerMethod = data.packerMethod || optimalPacker.defaultMethod;
 
 		let methodValid = false;
 		let packer = getPackerByType(data.packer);
