@@ -19,7 +19,7 @@ function getPackerByType(name:string | undefined | null):PackerClass {
 	if(!name) return OptimalPacker;
 
 	for(const item of list) {
-		if(item.name === name) {
+		if(item.packerName === name) {
 			return item;
 		}
 	}
