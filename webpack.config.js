@@ -10,10 +10,10 @@ let entry = [
 ];
 
 let plugins = [];
-
-let devtool = 'eval-source-map';
-let output = 'static/js/index.js';
 let debug = true;
+
+let output = 'static/js/index.js';
+let devtool = debug ? 'eval-source-map' : 'source-map';
 
 let profiler = debug
 let prod = !debug;
@@ -56,7 +56,7 @@ if (argv.build) {
 		],
 	}));
 
-	devtool = false;
+	//devtool = false;
 	output = outputDir + 'static/js/index.js';
 	debug = false;
 }

@@ -78,6 +78,7 @@ class APP {
 			this.onPackError({
 				description: ErrorHandler.translateError(e)
 			});
+			console.error(e);
 		}
 	}
 
@@ -180,6 +181,7 @@ class APP {
 			catch (e) {
 				Observer.emit(GLOBAL_EVENT.HIDE_PROCESSING);
 				TypedObserver.showMessage.emit(I18.f("EXPORTER_ERROR", e.toString()));
+				console.error(e);
 				return;
 			}
 
