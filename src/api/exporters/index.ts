@@ -353,8 +353,8 @@ function prepareData(data: Rect[], options: RenderSettings): {
 
 function correctOrder(api:FunkinPackerApi, exporter: Exporter, rects:ExporterRect[], config:RenderSettings) {
 	let storedOrder = api.getStoredOrder();
-	if(storedOrder !== null) {
-		storedOrder = [...storedOrder];
+	if(!!storedOrder) {
+		storedOrder = storedOrder.slice();
 		/* if(config.removeFileExtension) {
 			for(let i = 0; i < storedOrder.length; i++) {
 				let name = storedOrder[i];

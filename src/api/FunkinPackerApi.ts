@@ -10,7 +10,7 @@ export default class FunkinPackerApi {
 	private onComplete: (res:unknown) => void;
 	private onError: (err:string) => void;
 
-	private storedOrder: string[] | null;
+	private storedOrder: string[] | null = null;
 
 	constructor() {
 		this.options = {};
