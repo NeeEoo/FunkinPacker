@@ -65,6 +65,11 @@ let config = {
     devtool: devtool,
     target: target,
     mode: mode,
+    performance: {
+        hints: false,
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    },
     module: {
         noParse: /.*[\/\\]bin[\/\\].+\.js/,
         rules: [

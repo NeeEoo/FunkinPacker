@@ -126,11 +126,6 @@ function prepareData(data, options) {
 
     }
 
-    if(ret.length) {
-        ret[0].first = true;
-        ret[ret.length-1].last = true;
-    }
-
     return {rects: ret, config: opt};
 }
 
@@ -203,6 +198,11 @@ function startExporter(exporter, data, options) {
         }
 
         //console.log(rects.map((v)=>v.name));
+
+        if(rects.length) {
+            rects[0].first = true;
+            rects[rects.length-1].last = true;
+        }
 
         data = rects;
         renderOptions.rects = rects;
