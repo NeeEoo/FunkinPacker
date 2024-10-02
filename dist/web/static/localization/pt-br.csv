@@ -1,0 +1,141 @@
+OK;OK
+YES;SIM
+NO;NÃO
+CANCEL;CANCELAR
+SAVE;SALVAR
+IMAGES;Imagens
+LANGUAGE;Linguagem:
+ADD_IMAGES;Adicionar imagens
+ADD_IMAGES_TITLE;Adicionar imagens
+ADD_FOLDER;Adicionar pasta
+ADD_FOLDER_TITLE;Adicionar pasta
+ADD_ZIP;Adicionar ZIP
+ADD_ZIP_TITLE;Adicionar imagens zipadas
+IMAGE_DROP_HELP;o clique e arraste imagens aqui
+CLEAR;Limpart
+CLEAR_TITLE;Limpar todas as imagens
+DELETE;Deletar
+DELETE_TITLE;Deletar imagens selecionadas
+REPLACE_FILES_PROMPT;Substituir arquivos existentes?
+DISPLAY_OUTLINES;Contorno:
+SCALE;Escala:
+SHOW_SPRITES;Animações
+SPRITE_NAME;Nome do sprite:
+ANIMATION_SPEED;Velocidade da animação:
+TEXTURE_NAME;Nome da textura:
+TEXTURE_NAME_TITLE;Nome da textura para exportação
+TEXTURE_FORMAT;Formato da textura:
+TEXTURE_FORMAT_TITLE;Formato da textura para exportação
+REMOVE_FILE_EXT;Remover extensão:
+REMOVE_FILE_EXT_TITLE;Remover extensão do nome do sprite
+PREPEND_FOLDER;Anexar nome da pasta:
+PREPEND_FOLDER_TITLE;Anexe o nome da pasta ao nome do arquivo
+BASE64_EXPORT_TITLE;Export para o formato base64 (se possível)
+BASE64_EXPORT;Exportar para base64
+TINIFY_TITLE;Tinify usando https://tinypng.com
+TINIFY;Tinify
+TINIFY_KEY_TITLE;Chave do TinyPNG https://tinypng.com/developers
+TINIFY_KEY;Chave do TinyPNG
+DISABLE_SMOOTHING;Desabilitar suavização
+DISABLE_SMOOTHING_TITLE;Desabilitar suavização
+SCALE;Escala:
+SCALE_TITLE;Escala base da textura
+FILTER;Filtros:
+FILTER_TITLE;Aplicar filtros no resultado
+FORMAT;Formato:
+FORMAT_TITLE;Formato de exportação
+FILE_NAME;Nome do arquivo:
+FILE_NAME_TITLE;Nome do arquivo do resultado
+SAVE_PATH;Caminho dos saves
+SAVE_PATH_TITLE;Caminho pra salvar o spritesheet
+WIDTH;Altura:
+WIDTH_TITLE;Altura máxima
+HEIGHT;Largura:
+HEIGHT_TITLE;Largura máxima
+FIXED_SIZE;Tamanho fixo:
+POWER_OF_TWO;Potência de dois:
+POWER_OF_TWO_TITLE;Potência de dois tamanhos de textura
+FIXED_SIZE_TITLE;Tamanho dos sprites fixo
+PADDING;Distãncia dos sprites:
+PADDING_TITLE;Distãncia dos sprites
+EXTRUDE;Extrusão:
+EXTRUDE_TITLE;Tamanho da extrusão de pixels da borda dos sprites
+ALLOW_ROTATION;Permitir rotação:
+ALLOW_ROTATION_TITLE;Permitir rotação de sprites
+ALLOW_TRIM;Permitir recorte:
+ALLOW_TRIM_TITLE;Permitir recorte de sprites
+ALPHA_THRESHOLD;Alpha threshold:
+ALPHA_THRESHOLD_TITLE;Valor do Alpha threshold
+TRIM_MODE;Modo de recorte:
+TRIM_MODE_TITLE;Variantes de modo de recorte
+DETECT_IDENTICAL;Detectar sprites idênticos:
+DETECT_IDENTICAL_TITLE;Detectar sprites identicos
+PACKER;Compressor:
+PACKER_TITLE;Compressor
+PACKER_METHOD;Método:
+PACKER_METHOD_TITLE;Método de compressão:
+EXPORT;Exportar
+PLEASE_WAIT;Por favor, espere...
+INVALID_SIZE_ERROR;Tamanho inválido. Min: %sx%s
+NO_IMAGES_ERROR;Por favor, adiciona alguma imagem antes
+CLEAR_WARNING;Tem certeza que quer limpar todas as imagens?
+INVALID_ZIP_ERROR;Arquivo ZIP inválido
+NO_TINIFY_KEY_ERROR;Por favor, defina sua key do TinyPNG https://tinypng.com/developers
+TINIFY_ERROR;Erro no Tinify: %s
+TINIFY_ERROR_COMMON;Erro no Tinify...
+OLD_BROWSER_MESSAGE1;Desculpe, mas seu navegador é muito antigo para este aplicativo...
+OLD_BROWSER_MESSAGE2;Por favor, use um navegador recente:
+ABOUT_HOMEPAGE;Página inicial:
+ABOUT_SOURCES;Fontes:
+ABOUT_BUGS;Rastreador de bugs:
+ABOUT_APPS;Baixar app:
+ABOUT_WEB;Versão web:
+ABOUT_LIBS;Libs usadas:
+ABOUT_GULP_VERSION;Módulo Gulp:
+ABOUT_WEBPACK_VERSION;Plugin Webpack:
+ABOUT_CONTRIBUTORS;Contribuidores:
+EXPORTER_ERROR;Erro na Exportação: %s
+CUSTOM_EXPORTER_ERROR;Erro no Template: %s
+FILE_EXT;Extensão do arquivo:
+DOCUMENTATION;Documentação
+SAVE_CHANGES_CONFIRM;Salvar alterações do projeto?
+MENU_FILE;Arquivo
+MENU_FILE_PROJECT_NEW;Novo projeto
+MENU_FILE_PROJECT_LOAD;Abrir projeto
+MENU_FILE_PROJECT_LOAD_RECENT;Abrir recente
+MENU_FILE_PROJECT_SAVE;Salvar projeto
+MENU_FILE_PROJECT_SAVE_AS;Salvar projeto como...
+MENU_FILE_PREFERENCES_SAVE;Salvar preferências
+MENU_FILE_INSTALL_CLI;Instalar CLI
+MENU_FILE_EXIT;Sair
+MENU_ACTIONS;Ações
+MENU_ACTIONS_ADD_IMAGES;Adicionar imagens
+MENU_ACTIONS_ADD_FOLDER;Adicionar pasta
+MENU_ACTIONS_SELECT_ALL;Selecionar tudo
+MENU_ACTIONS_DELETE;Deletar
+MENU_ACTIONS_CLEAR;Limpar
+MENU_ACTIONS_EXPORT;Exportar
+MENU_TOOLS;Ferramentas
+MENU_TOOLS_SPLITTER;Dividir sheet
+MENU_LANGUAGE;Linguagem
+MENU_HELP;Ajuda
+MENU_HELP_ABOUT;Sobre
+UPDATER_TITLE;Uma nova versão está disponível: %s
+CLOSE;Fechar
+INSTALL;Instalar
+SKIP_VERSION;Pular
+SKIP_VERSION_CONFIRM;Tem certeza que não quer mais instalar essa versão e não ser mais lembrado disso?
+CONTEXT_MENU_UNDO;Desfazer
+CONTEXT_MENU_REDO;Refazer
+CONTEXT_MENU_CUT;Recortar
+CONTEXT_MENU_COPY;Copiar
+CONTEXT_MENU_PASTE;Colar
+CONTEXT_MENU_DELETE;Deletar
+CONTEXT_MENU_SELECT_ALL;Selecionar tudo
+SPLIT;Dividir
+SELECT_TEXTURE;Textura
+SELECT_DATA_FILE;Arquivo de Dados
+SPLITTER;Recompactar / Dividir sheet
+SPLITTER_ERROR_NO_FRAMES;Sprites não encontrados. Provavelmente, o formato do Atlas está incorreto .
+DISABLE_UNTRIM;Desabilitar recorte:
+REPACK;Recompactar
