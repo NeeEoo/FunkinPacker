@@ -22,7 +22,7 @@ interface Props {
 }
 
 interface State {
-	splitter: Splitter;
+	//splitter: Splitter;
 	textureBack: string;
 	scale: number;
 	updateFileName: boolean;
@@ -63,7 +63,7 @@ class SheetSplitter extends React.Component<Props, State> {
 		this.step = 0.01;
 
 		this.state = {
-			splitter: null,
+			//splitter: null,
 			textureBack: this.textureBackColors[0],
 			scale: 1,
 			updateFileName: APP.i.packOptions.repackUpdateFileName === undefined ? true : APP.i.packOptions.repackUpdateFileName,
@@ -176,7 +176,8 @@ class SheetSplitter extends React.Component<Props, State> {
 					ctx.save();
 
 					ctx.translate(item.spriteSourceSize.x + item.spriteSourceSize.w/2, item.spriteSourceSize.y + item.spriteSourceSize.h/2);
-					ctx.rotate(this.state.splitter.inverseRotation ? Math.PI/2 : -Math.PI/2);
+					const splitter = this.getCurrentSplitter();
+					ctx.rotate(splitter.inverseRotation ? Math.PI/2 : -Math.PI/2);
 
 					let dx = trimmed ? item.spriteSourceSize.y - item.spriteSourceSize.h/2 : -item.spriteSourceSize.h/2;
 					let dy = trimmed ? -(item.spriteSourceSize.x + item.spriteSourceSize.w/2) : -item.spriteSourceSize.w/2;
@@ -287,7 +288,8 @@ class SheetSplitter extends React.Component<Props, State> {
 				ctx.save();
 
 				ctx.translate(item.spriteSourceSize.x + item.spriteSourceSize.w/2, item.spriteSourceSize.y + item.spriteSourceSize.h/2);
-				ctx.rotate(this.state.splitter.inverseRotation ? Math.PI/2 : -Math.PI/2);
+				const splitter = this.getCurrentSplitter();
+				ctx.rotate(splitter.inverseRotation ? Math.PI/2 : -Math.PI/2);
 
 				let dx = trimmed ? item.spriteSourceSize.y - item.spriteSourceSize.h/2 : -item.spriteSourceSize.h/2;
 				let dy = trimmed ? -(item.spriteSourceSize.x + item.spriteSourceSize.w/2) : -item.spriteSourceSize.w/2;
@@ -398,9 +400,12 @@ class SheetSplitter extends React.Component<Props, State> {
 				this.dataName = item.name;
 				this.dataFileNameRef.current.textContent = this.dataName;
 
-				this.setState({
-					splitter: splitterMaster.findSplitter(this.data)
-				});
+				const splitter = splitterMaster.findSplitter(this.data);
+				splitterMaster.loadSplitter(splitter);
+
+				//this.setState({
+				//	splitter: splitter
+				//});
 				this.updateView();
 			};
 
@@ -414,7 +419,7 @@ class SheetSplitter extends React.Component<Props, State> {
 
 		//console.log(this.data);
 
-		splitterMaster.loadSplitter(this.state.splitter);
+		//splitterMaster.loadSplitter(this.state.splitter);
 		splitterMaster.splitData(this.data, {
 			textureWidth: this.texture.width,
 			textureHeight: this.texture.height,
@@ -644,7 +649,8 @@ class SheetSplitter extends React.Component<Props, State> {
 	changeSplitter = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		const splitter = splitterMaster.getSplitterFromName(e.target.value);
 
-		this.setState({splitter: splitter});
+		splitterMaster.loadSplitter(splitter);
+		//this.setState({splitter: splitter});
 		this.updateView();
 	}
 
@@ -691,8 +697,12 @@ class SheetSplitter extends React.Component<Props, State> {
 		Observer.emit(GLOBAL_EVENT.HIDE_SHEET_SPLITTER);
 	}
 
+	getCurrentSplitter = () => {
+		return splitterMaster.getCurrentSplitter();
+	}
+
 	override render() {
-		const currentSplitterName = splitterMaster.getCurrentSplitter().splitterName;
+		const currentSplitterName = this.getCurrentSplitter().splitterName;
 
 		let displayGridProperties = 'none';
 

@@ -31,6 +31,8 @@ class UIKit extends Splitter {
 			cb(false);
 		}
 		catch(e) {
+			if(DEBUG)
+				console.error(e);
 			cb(false);
 		}
 	}
@@ -81,7 +83,9 @@ class UIKit extends Splitter {
 			cb(res);
 		}
 		catch(e) {
-			// continue regardless of error
+			if(DEBUG)
+				console.error(e);
+			cb(false);
 		}
 	}
 

@@ -10,6 +10,7 @@ import type { Rect } from 'api/types';
 import TypedObserver from 'TypedObserver';
 import APP from 'client/APP';
 import Phaser3 from './Phaser3';
+import AtlasSpritemap from './AtlasSpritemap';
 
 const GridSplitter = new Grid();
 
@@ -21,7 +22,8 @@ export const list: Splitter[] = [
 	//XML,
 	new UIKit(),
 	new Spine(),
-	new Phaser3()
+	new Phaser3(),
+	new AtlasSpritemap()
 ] as const;
 
 function getDefaultSplitter():Splitter {
@@ -109,7 +111,7 @@ export class SplitterMaster {
 			throw new Error("No splitter found");
 		}
 
-		//console.log(this.currentSplitter.name, "is parsing data", data, options);
+		console.log(this.currentSplitter.splitterName, "is parsing data", data, options);
 
 		data = this.cleanData(data);
 

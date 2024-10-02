@@ -8,6 +8,8 @@ class Phaser3 extends Splitter {
 
             cb(json && json.textures && Array.isArray(json.textures));
         } catch (e) {
+			if(DEBUG)
+				console.error(e);
             cb(false);
         }
     }
@@ -24,14 +26,18 @@ class Phaser3 extends Splitter {
                     res.push(item);
                 }
             }
-        } catch (e) {}
 
-        cb(res);
+			cb(res);
+        } catch (e) {
+			if(DEBUG)
+				console.error(e);
+			cb(false);
+		}
     }
 
-    static get type() {
-        return "Phaser 3";
-    }
+	override get splitterName() {
+		return 'Phaser 3';
+	}
 }
 
 export default Phaser3;

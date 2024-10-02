@@ -31,13 +31,6 @@ type RawSparrowFrame = {
 }
 
 class Sparrow extends Splitter {
-	override cleanData(data: string): string {
-		if(!data) {
-			return data;
-		}
-		return (data.startsWith("ï»¿")) ? data.slice(3) : data;
-	}
-
 	override doCheck(data: string, cb: (checked: boolean) => void) {
 		if(!data) {
 			cb(false);

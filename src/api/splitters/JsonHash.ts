@@ -8,6 +8,8 @@ class JsonHash extends Splitter {
 			cb(json && json.frames && !Array.isArray(json.frames));
 		}
 		catch(e) {
+			if(DEBUG)
+				console.error(e);
 			cb(false);
 		}
 	}
@@ -30,6 +32,8 @@ class JsonHash extends Splitter {
 			cb(res);
 		}
 		catch(e) {
+			if(DEBUG)
+				console.error(e);
 			cb(false);
 		}
 	}

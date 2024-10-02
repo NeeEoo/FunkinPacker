@@ -20,11 +20,15 @@ class Splitter {
 	}
 
 	cleanData(_data: string) {
-		return _data;
+		if(!_data) {
+			return _data;
+		}
+		// UTF8 BOM
+		return (_data.startsWith("ï»¿")) ? _data.slice(3) : _data;
 	}
 
 	get splitterName() {
-		return 'Default';
+		return '!! Default !!';
 	}
 
 	static fixFileName(name: string) {

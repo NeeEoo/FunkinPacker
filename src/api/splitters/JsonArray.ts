@@ -8,6 +8,8 @@ class JsonArray extends Splitter {
 			cb(json && json.frames && Array.isArray(json.frames));
 		}
 		catch(e) {
+			if(DEBUG)
+				console.error(e);
 			cb(false);
 		}
 	}
@@ -22,9 +24,11 @@ class JsonArray extends Splitter {
 				res.push(item);
 			}
 
-		cb(res);
+			cb(res);
 		}
 		catch(e) {
+			if(DEBUG)
+				console.error(e);
 			cb(false);
 		}
 	}
