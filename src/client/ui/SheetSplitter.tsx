@@ -519,6 +519,13 @@ class SheetSplitter extends React.Component<Props, State> {
 				if(weirdSize > 0) {
 					addMessage(<><span style={{color: "rgb("+WEIRD_SIZE_COLOR+")"}}>Unexpected Frame size detected, possible manual offsets for {weirdSize} frames.</span></>);
 				}
+
+				const splitterName = splitterMaster.currentSplitter.splitterName;
+				if(splitterName === "JSON (hash)" || splitterName === "JSON (array)" || splitterName === "Phaser 3") {
+					addMessage(<><span style={{color: "rgb("+WEIRD_SIZE_COLOR+")"}}>Warning: This format might contain durations, which are not supported by Funkin Packer.</span></>);
+				}
+
+
 				this.setState({message: <>{splitterMessage.map((a, i) => <span key={"splitter-message-" + i}>{a}</span>)}</>});
 
 				// packer detection

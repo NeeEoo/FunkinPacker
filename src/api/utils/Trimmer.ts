@@ -74,14 +74,26 @@ class Trimmer {
 			} else {
 				cns.width = img.width;
 				cns.height = img.height;
+				console.log(cns.width, cns.height);
+				console.log(img.width, img.height);
 
-				ctx.clearRect(0, 0, img.width, img.height);
+				//console.log(item.name, img.width, img.height);
+
+				ctx.clearRect(0, 0, cns.width, cns.height);
+
+				console.log("cleared");
 
 				ctx.drawImage(img.image, 0, 0, img.width, img.height, 0, 0, img.width, img.height);
 
+				console.log("drawn");
+
 				const {data} = ctx.getImageData(0, 0, img.width, img.height);
 
+				console.log("got data");
+
 				spaces = this.getSpacing(data, img.width, img.height, threshold);
+
+				console.log("got spacing", spaces);
 			}
 
 			if(spaces.left !== img.width) { // was able to trim it

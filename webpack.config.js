@@ -1,9 +1,12 @@
-const path = require('path');
-const webpack = require('webpack');
-const CopyPlugin = require('copy-webpack-plugin');
-//const argv = require('optimist').argv;
-// eslint-disable-next-line no-unused-vars
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+import path from 'path';
+import webpack from 'webpack';
+import CopyPlugin from 'copy-webpack-plugin';
+//import argv from 'optimist'.argv;
+
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let entry = [
 	'./src/client/index.tsx'
@@ -70,7 +73,7 @@ else {
 }
 
 /*plugins.push(
-	new BundleAnalyzerPlugin()
+	new (import('webpack-bundle-analyzer').BundleAnalyzerPlugin)()
 );*/
 
 const config = {
@@ -145,4 +148,4 @@ config.resolve.alias.client = path.resolve(__dirname, './src/client');
 config.resolve.alias.TypedObserver = path.resolve(__dirname, './src/client/TypedObserver');
 config.resolve.extensions = ['.tsx', '.ts', '.jsx', '.js'];
 
-module.exports = config;
+export default config;

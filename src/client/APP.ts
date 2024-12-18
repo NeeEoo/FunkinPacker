@@ -180,7 +180,7 @@ class APP {
 			}
 			catch (e) {
 				Observer.emit(GLOBAL_EVENT.HIDE_PROCESSING);
-				TypedObserver.showMessage.emit(I18.f("EXPORTER_ERROR", e.toString()));
+				TypedObserver.showMessage.emit(I18.f("EXPORTER_ERROR", ErrorHandler.translateError(e)));
 				console.error(e);
 				return;
 			}

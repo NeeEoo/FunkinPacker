@@ -1,11 +1,15 @@
-const js = require("@eslint/js");
-const react = require("eslint-plugin-react");
-const globals = require("globals");
+import js from "@eslint/js";
+//import tseslint from "typescript-eslint";
+import react from "eslint-plugin-react";
+import globals from "globals";
 
-module.exports = [
+export default [
 	js.configs.all,
+	//tseslint.configs.recommended,
+	//tseslint.configs.stylistic,
+	{ignores: ["dist"]},
 	{
-		//files: ["src/*.js", "src/*.jsx"],
+		//files: ["src/*.js", "src/*.jsx", "src/*.ts", "src/*.tsx"],
 		languageOptions: {
 			ecmaVersion: 2022,
 			sourceType: "module",
@@ -61,6 +65,7 @@ module.exports = [
 			"no-inline-comments": "off",
 			"line-comment-position": "off",
 			"max-lines-per-function": "off",
+			"no-empty-function": "off",
 			"no-negated-condition": "off",
 			"no-bitwise": "off",
 			"no-continue": "off",
@@ -71,6 +76,7 @@ module.exports = [
 			"complexity": "off",
 			"default-case": "warn",
 			"consistent-this": "off",
+			"radix": "error",
 			"init-declarations": "off",
 			"sort-vars": "off",
 			"prefer-named-capture-group": "off",
@@ -83,6 +89,7 @@ module.exports = [
 			"no-shadow": "off",
 			"no-warning-comments": "off",
 			"no-await-in-loop": "off",
+			//"@typescript-eslint/no-unsafe-return": "error"
 		}
 	}
 ];
