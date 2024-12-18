@@ -60,8 +60,8 @@ class UIKit extends Splitter {
 						h: item.h as number
 					},
 					spriteSourceSize: {
-						x: item.oX as number,
-						y: item.oY as number,
+						x: 0,
+						y: 0,
 						w: item.w as number,
 						h: item.h as number
 					},

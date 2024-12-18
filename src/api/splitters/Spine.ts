@@ -54,15 +54,15 @@ class Spine extends Splitter {
 
 				currentItem = {
 					name: Splitter.fixFileName(line.trim()),
-					spriteSourceSize: {
-						x: 0,
-						y: 0,
-						w: -1,
-						h: -1
-					},
 					frame: {
 						x: -1,
 						y: -1,
+						w: -1,
+						h: -1
+					},
+					spriteSourceSize: {
+						x: 0,
+						y: 0,
 						w: -1,
 						h: -1
 					},
@@ -112,10 +112,10 @@ class Spine extends Splitter {
 						currentItem.frameSize.h = currentItem.sourceSize.h;
 						break;
 					case "offset":
-						currentItem.spriteSourceSize.x = parseInt(valParts[0], 10);
-						currentItem.spriteSourceSize.y = parseInt(valParts[1], 10);
-						currentItem.frameSize.x = currentItem.spriteSourceSize.x;
-						currentItem.frameSize.y = currentItem.spriteSourceSize.y;
+						//currentItem.spriteSourceSize.x = parseInt(valParts[0], 10);
+						//currentItem.spriteSourceSize.y = parseInt(valParts[1], 10);
+						currentItem.frameSize.x = parseInt(valParts[0], 10);
+						currentItem.frameSize.y = parseInt(valParts[1], 10);
 						break;
 					default:
 						break;

@@ -67,8 +67,8 @@ class XML extends Splitter {
 							h: item.h
 						},
 						spriteSourceSize: {
-							x: item.oX,
-							y: item.oY,
+							x: 0,
+							y: 0,
 							w: item.w,
 							h: item.h
 						},
